@@ -237,4 +237,4 @@ CALL sp_get_department_summaries();
 During the engineering of this database analysis module, several engine-level optimizations and structural rules were successfully resolved:
 1. **Aggregations & Strict Mode Resolution:** Mastered working around MySQL's `ONLY_FULL_GROUP_BY` enforcement regulations. Ensured that any un-aggregated selection variables were strictly wrapped or matched contextually inside parent `GROUP BY` logic.
 2. **Ambiguous Column Avoidance:** Mitigated identifier collision errors (`Error Code: 1052`) across highly joined datasets by implementing uniform alias prefix references (e.g., `cc.`, `d.`) on matching primary/foreign keys.
-3. **Optimized Window Computations:** Leveraged analytical partitions (`PARTITION BY`) to compute rankings and rolling groupings natively at the database processing layer, eliminating the need to post-process data using secondary languages like Python or R.
+3. **Optimized Window Computations:** Leveraged analytical partitions (`PARTITION BY`) to compute rankings and rolling groupings natively at the database processing layer.
